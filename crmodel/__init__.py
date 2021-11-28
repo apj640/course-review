@@ -1,6 +1,6 @@
 # Set model backend to be sqlite3
-#model_backend = 'sqlite3'
-model_backend = 'datastore'
+model_backend = 'sqlite3'
+#model_backend = 'datastore'
 
 """ 
 Model backend can be changed later by commenting out previous line, 
