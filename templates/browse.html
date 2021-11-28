@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% block content %}
+<h2>All Course Reviews</h2>
+{% for review in reviews %}
+<hr />
+<div class="entry">
+  <p>
+    <span class="review-label">Author:</span>
+    <span class="review-item">{{ review.author }}</span>
+  </p>
+  <p>
+    <span class="review-label">Department:</span>
+    <span class="review-item"> {{ review.dept }}</span>
+  </p>
+  <p>
+    <span class="review-label">Course Number: </span>
+    <span class="review-item">{{ review.crnum }}</span>
+  </p>
+  <p>
+    <span class="review-label"> Quarter: </span>
+    <span class="review-item"
+      >{% if (review.qtr == 1) %} Fall {% elif (review.qtr == 2) %} Winter {%
+      elif (review.qtr == 3) %} Spring {% else %} Summer {% endif %}
+    </span>
+  </p>
+  <p>
+    <span class="review-label">Year:</span>
+    <span class="review-item">{{ review.year }}</span>
+  </p>
+  <p>
+    <span class="review-label">Instructor: </span>
+    <span class="review-item">{{ review.instructor }}</span>
+  </p>
+  <p>
+    <span class="review-label">Review:</span>
+    <span class="review-item">{{ review.review }}</span>
+  </p>
+  <p>
+    <span class="review-label">Rating:</span>
+    <span class="review-item">{{ review.rating }}/5</span>
+  </p>
+</div>
+{% endfor %}
+<hr />
+{% endblock %}

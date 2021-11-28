@@ -1,0 +1,94 @@
+{% extends "layout.html" %} {% block content %}
+<h3>Fill out the form to create a new course review.</h3>
+<form action="{{ url_for('create') }}" method="post">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <label for="author">Your Name: </label>
+        </td>
+        <td><input name="author" type="text" /></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="dept">Course Department: </label>
+        </td>
+        <td>
+          <input name="dept" type="text" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="crnum">Course Number</label>
+        </td>
+        <td>
+          <input name="crnum" type="text" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="qtr">Quarter: </label>
+        </td>
+        <td>
+          <select name="qtr">
+            <option value="1">Fall</option>
+            <option value="2">Winter</option>
+            <option value="3">Spring</option>
+            <option value="4">Summer</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="year">Year: </label>
+        </td>
+        <td>
+          <input
+            name="year"
+            type="number"
+            min="1900"
+            max="2021"
+            step="1"
+            value="2021"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="instructor">Instructor:</label>
+        </td>
+        <td>
+          <input name="instructor" type="text" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="review">Enter your review here:</label>
+        </td>
+        <td>
+          <textarea name="review" cols="30" rows="10"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="rating">Rating:</label>
+        </td>
+        <td>
+          <select name="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="Submit" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+{% endblock %}
