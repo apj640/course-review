@@ -8,13 +8,14 @@ container on Google Cloud Run, and can be accessed [here](https://hw4-qu2dd6bijq
 ## Instructions
 To build and run locally:
 
-    1. Clone the repository.
-    2. Navigate to the project directory:
+1. Clone the repository.
+2. Navigate to the project directory:
         cd course-review
-    3. Create a virtual environment
+3. Create a virtual environment
         python -m venv env
-    4. Install dependencies
+        source env/bin/activate
+4. Install dependencies
         pip install -r requirements.txt
-    6. Run
+6. Run
         python app.py
-    7. In your browser, navigate to http://localhost:5000
+7. In your browser, navigate to http://localhost:5000
