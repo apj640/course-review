@@ -10,12 +10,20 @@ To build and run locally:
 
 1. Clone the repository.
 2. Navigate to the project directory:
-        cd course-review
+```
+cd course-review
+```
 3. Create a virtual environment
-        python -m venv env
-        source env/bin/activate
+```
+python -m venv env
+source env/bin/activate
+```
 4. Install dependencies
-        pip install -r requirements.txt
-6. Run
-        python app.py
-7. In your browser, navigate to http://localhost:5000
+```
+pip install -r requirements.txt
+```
+5. Run
+```
+python app.py
+```
+6. In your browser, navigate to http://localhost:5000
